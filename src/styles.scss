@@ -1,0 +1,38 @@
+@import '~material-design-icons/iconfont/material-icons.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.pos-icon {
+    padding: 0 14px;
+}
+
+.pos-spacer {
+    flex: 1 1 auto;
+}
+.toolbar-icon{
+    
+        display: inline-flex;
+        vertical-align: middle;
+        align-items: center;
+      
+}
+
+$text_color: #ffffff;
+$background_color: #000000;
+a,a:hover{
+    color: $text_color;
+}
+
+.product-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .product-full-width {
+    width: 100%;
+  }
+
+  
+.example-spacer {
+    flex: 1 1 auto;
+  }

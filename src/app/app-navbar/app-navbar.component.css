@@ -1,0 +1,46 @@
+.pos-container {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  
+}
+
+.pos-sidenav {
+  margin-top: 62px;
+  display: flex;
+  align-items: top;
+  justify-content: top;
+  width: 200px;
+  background: rgba(255, 0, 0, 0.5);
+  
+}
+.mat-list{  
+  width: 100%;
+}
+.pos-header {
+ 
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.pos-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+button.sidenav-toggle{
+  /*border: 1px solid red;*/
+  top:0;
+  left: 0;
+  /*margin-left:117px;*/
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+

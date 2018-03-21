@@ -1,0 +1,35 @@
+
+    @page {
+        margin: 0;
+    }
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    div.row > div {
+        display: inline-block;
+        border: solid 1px #ccc;
+        margin: 0.1cm;
+        font-size: 1rem;
+    }
+    div.row {
+        display: block;
+        margin: solid 2px black;
+        margin: 0.2cm 1cm;
+        font-size: 0;
+        white-space: nowrap;
+    }
+
+
+    table {
+       border-collapse: collapse;
+        width: 100%;
+    }
+    table.header{
+        text-align: center;
+        border-collapse: collapse;
+    }
+    td,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }

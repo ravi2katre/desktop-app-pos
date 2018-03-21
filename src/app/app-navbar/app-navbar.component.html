@@ -1,0 +1,82 @@
+<ng-container *ngIf="shouldRun">
+    
+        <mat-toolbar class="pos-header" color="primary" layout="row" style="position: fixed;">
+            <button mat-icon-button class="menu-icon" (click)="sidenav.toggle()">
+                <mat-icon  class="mat-24" aria-label="Menu">menu</mat-icon>
+            </button>
+            <span>
+                <h2>POS</h2>
+            </span>
+            <span class="example-spacer"></span>                       
+
+            <div layout="row" layout-align="start center" flex>
+              <a routerLink="home"><button mat-button >Home</button></a>              
+              <a routerLink="pos"><button mat-button >POS</button></a>
+              <span flex></span>
+            </div>
+            
+            <a routerLink="orders"><mat-icon class="toolbar-icon">settings</mat-icon></a>
+
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voicemail</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span>
+              </button>
+            </mat-menu>
+            
+
+          </mat-toolbar>
+   
+    
+    <mat-sidenav-container class="pos-container" >
+        
+      <mat-sidenav #sidenav mode="side" opened="false" class="pos-sidenav"
+                   [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                   [fixedBottomGap]="options.value.bottom"
+                   
+                   >
+
+                   <mat-list>
+                    <mat-list-item><a routerLink="products">Products</a></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><a routerLink="orders">Orders</a></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><a routerLink="customers">Customers</a></mat-list-item>
+                  </mat-list>
+                  
+
+      </mat-sidenav>
+  
+      <mat-sidenav-content [formGroup]="options">
+          <!-- button mat-button (click)="sidenav.toggle()" class="sidenav-toggle"><i class="material-icons">play_arrow</i></button -->
+        <!--p><mat-checkbox formControlName="fixed">Fixed</mat-checkbox></p>
+        <p><mat-form-field>
+          <input matInput type="number" formControlName="top" placeholder="Top gap">
+        </mat-form-field></p>
+        <p><mat-form-field>
+          <input matInput type="number" formControlName="bottom" placeholder="Bottom gap">
+        </mat-form-field></p -->
+
+        <div class="card-body mx-12 mt-12">
+            <div class="clearfix text-center"><alert></alert></div>
+            <router-outlet></router-outlet>
+          </div>
+
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  
+    <mat-toolbar class="pos-footer">Footer</mat-toolbar>
+  </ng-container>
+  
+  <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>  

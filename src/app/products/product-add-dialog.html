@@ -1,0 +1,16 @@
+<h1 mat-dialog-title> {{title}}</h1>
+<div mat-dialog-content>
+  
+    <mat-form-field class="product-full-width">
+      <input matInput placeholder="Product Name" [(ngModel)]="product.name" >
+    </mat-form-field>
+    <mat-form-field class="product-full-width">
+      <input matInput placeholder="Product Price" [(ngModel)]="product.price" >
+    </mat-form-field>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="save()" cdkFocusInitial>{{title}}</button>
+  <button mat-button (click)="onNoClick()">Close</button>
+  
+</div>
